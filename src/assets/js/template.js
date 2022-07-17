@@ -54,6 +54,7 @@
             $content.slideToggle(320);
         });
     });
+    console.log($('#mini-calendar').html())
     $('#mini-calendar').datepicker({
         todayHighlight: true, beforeShowDay: function (date) {
             if (date.getMonth() == (new Date()).getMonth())
@@ -86,5 +87,9 @@
         }
     }
 
-    toggleSwitch.addEventListener('change', switchTheme, false);
+    // console.log(toggleSwitch)
+    // return;
+    if (toggleSwitch) {
+        toggleSwitch.addEventListener('change', switchTheme, false);
+    }
 })(jQuery);
